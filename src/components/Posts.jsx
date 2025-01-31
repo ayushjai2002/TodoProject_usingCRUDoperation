@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { deletePost, getPost, updateData } from "../api/PostApi";
+import { deletePost, getPost } from "../api/PostApi";
 import "../App.css";
 import { Form } from "./Form";
 

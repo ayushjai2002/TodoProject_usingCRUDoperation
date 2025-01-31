@@ -44,10 +44,10 @@ export const Form = ({data, setData, updateDataApi, setUpdateDataApi}) =>{
         try{
             const res = await updateData(updateDataApi.id, addData) 
             console.log(res);
-            if(res.status===200){
+            if(res.status === 200){
                 setData((prev) => {
                     return prev.map((curElem) =>{
-                        return curElem.id === res.data.id ? res.data : curElem;
+                        return curElem.id === updateDataApi.id ? {...curElem, ...res.data } : curElem;
                     });
                 });
             }
